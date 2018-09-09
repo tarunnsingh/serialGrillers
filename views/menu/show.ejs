@@ -1,0 +1,82 @@
+<% include ../partials/header%>
+
+<%console.log(dish.ingr)%>
+
+<div id="menu" class="section">
+
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(<%=dish.image%>)"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container" id="menu-starter">
+
+				<!-- row -->
+				
+					<div style="float: right;">
+						<button class="main-button">Order Now</button>
+					</div>
+				
+					<form>
+					    <div class="row">
+					        <div class="col-xs-5 col-md-3">
+					            <div class="input-group">
+					                <input type="text" class="form-control" placeholder="Enter Coupon Code&hellip;">
+					                <span class="input-group-btn">
+					                    <button type="button" class="btn btn-default">Get Free Meal!</button>
+					                </span>
+					            </div>
+					        </div>
+					    </div>
+					</form>
+					
+				
+				<div class="row">
+
+					<div class="section-header text-center">
+						<h4 class="sub-title">Item Specifications</h4>
+						<h2 class="title white-text"><%=dish.name%></h2>
+						<div class="col-sm-5 panel panel-success" style="margin-left: 2%">
+							<h3 class="innerhead">About</h2>
+							<p class="desc"><%=dish.description%></p>
+						</div>
+						<div class="col-sm-5 panel panel-success" style="float: right; margin-right: 4%">
+							<h3 class="innerhead"><%=dish.name%>: Ingredents</h2>
+							<p class="desc"><%=dish.ingr%></p>	
+						</div>
+							
+						</div>
+
+					</div>
+					<hr class="style-three">
+					
+					
+					
+					<div class="col-sm-4">
+						<p class="desc" style="margin: 0px">Search more about <%=dish.name%></p>
+						<div>
+						<script>
+							  (function() {
+							    var cx = '004445779132058817490:0lcowuc1ygw';
+							    var gcse = document.createElement('script');
+							    gcse.type = 'text/javascript';
+							    gcse.async = true;
+							    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+							    var s = document.getElementsByTagName('script')[0];
+							    s.parentNode.insertBefore(gcse, s);
+							  })();
+							</script>
+							<gcse:search></gcse:search>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+	</div>
+
+
+
+
+<% include ../partials/footer%>

@@ -1,0 +1,56 @@
+<%include ../partials/header%>
+<!-- Menu -->
+		<div id="menu" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(https://cdn.cnn.com/cnnnext/dam/assets/171027052520-processed-foods-exlarge-tease.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row" style="margin-top: 7%;">
+
+					<div class="section-header text-center">
+						<h4 class="sub-title">You are a Chief</h4>
+						<h2 class="title white-text">Add a Dish to the Menu</h2>
+					</div>
+						<div class="container">
+							<div class="row" style="display:block;">
+								<div style="width: 30%; margin:25px auto;">
+									<form action="/menu" method="POST">
+										<div class="form-group">
+											<input class="form-control" type="text" name="name" placeholder="Name your Dish">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="text" name="price" placeholder="Enter Rates in ₹">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="text" name="image" placeholder="Source URL of Photo">
+										</div>
+										<div class="form-group">
+											<textarea class = "form-control" type = "text" name="description" placeholder="Enter Description" cols="40" rows="5"></textarea>
+										</div>
+										<div class="form-group">
+											<textarea class = "form-control" type = "text" name="ingr" placeholder="Ingredents of your Dish" cols="40" rows="5"></textarea>
+										</div>
+										<div class="form-group">
+										  <label for="breakfast">Breakfast</label>
+										  <input type="radio" name="mealtype" id="breakfast" value="breakfast">
+										  <label for="lunch">Lunch</label>
+										  <input type="radio" name="mealtype" id="lunch" value="lunch">
+										  <label for="dinner">Dinner</label>
+										  <input type="radio" name="mealtype" id="dinner" value="dinner">
+										<div class="form-group">
+											<button class="btn btn-lg btn-primary btn-block">Submit</button>
+										</div>
+									</form>
+									<a style="display: block; text-align: center;" href="/menu">Go Back!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<%include ../partials/footer%>

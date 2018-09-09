@@ -1,0 +1,147 @@
+<%include ../partials/header%>
+
+		<!-- Menu -->
+		<div id="menu" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/background01.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container" id="menu-starter">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="section-header text-center">
+						<h4 class="sub-title">Discover</h4>
+						<h2 class="title white-text">Our Menu</h2>
+					</div>
+
+					<!-- menu nav -->
+					<ul class="menu-nav">
+					  <li><a data-toggle="tab" href="#breakfast">Breakfast</a></li>
+					  <li class="active"><a data-toggle="tab" href="#lunch">Lunch</a></li>
+					  <li><a data-toggle="tab" href="#dinner">Dinner</a></li>
+					  <li><a data-toggle="tab" href="#dessert">Dessert</a></li>
+					  <li><a data-toggle="tab" href="#drinks">Drinks</a></li>
+					</ul>
+					<!-- /menu nav -->
+
+					<!-- menu content -->
+					<div id="menu-content" class="tab-content">
+
+						<!-- breakfast -->
+						<div id="breakfast" class="tab-pane active fade in">
+							<%var count = 1%>
+							<%dishes.forEach(function(dishes){%>
+							<%if(dishes.mealtype == 'breakfast'){%>
+							<%if(count%2 != 0){%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><a href="/menu/<%=dishes._id%>"><%=dishes.name%></a></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+							<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+							<hr>
+										
+								</div>
+							</div>
+								<!-- /single dish -->
+							<%count++;} else {%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><a href="/menu/<%=dishes._id%>"><%=dishes.name%></a></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+										<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+
+										<hr>
+								</div>
+								<!-- /single dish -->
+							</div>	
+							<%}%>
+							<%count++;}});%>
+							
+
+						</div>
+						<!-- /breakfast -->
+
+
+
+
+						<!-- lunch -->
+						<div id="lunch" class="tab-pane active fade in">
+							<%var count = 1%>
+							<%dishes.forEach(function(dishes){%>
+							<%if(dishes.mealtype == "lunch"){%>
+							<%if(count%2 != 0){%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><a href="/menu/<%=dishes._id%>"><%=dishes.name%></a></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+							<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+							<hr>
+										
+								</div>
+							</div>
+								<!-- /single dish -->
+							<%count++;} else {%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><a href="/menu/<%=dishes._id%>"><%=dishes.name%></a></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+										<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+
+										<hr>
+								</div>
+								<!-- /single dish -->
+							</div>	
+							<%}%>
+							<%count++;}});%> 
+
+						</div>
+						<!-- /lunch -->
+
+					</div>
+					<!-- /menu content -->
+
+				</div>
+				<hr class="style-three">
+				<!-- /row -->
+				<div class="text-center" >
+					<div class="row">
+						<a  href="/menu/new"><button class="main-button">Add Dishes to Menu</button></a>
+			
+					</div>
+				
+				</div>
+				
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Menu -->
+
+
+
+
+<%include ../partials/footer%>

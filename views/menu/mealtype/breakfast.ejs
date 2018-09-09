@@ -1,0 +1,48 @@
+<!-- menu content -->
+					<div id="menu-content" class="tab-content">
+
+						<!-- breakfast -->
+						<div id="breakfast" class="tab-pane fade in active">
+							<%var count = 1%>
+							<%dishes.forEach(function(dishes){%>
+							<%if(dishes.mealtype == 'breakfast'){%>
+							<%if(count%2 != 0){%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><%=dishes.name%></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+							<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+							<hr>
+										
+								</div>
+							</div>
+								<!-- /single dish -->
+							<%count++;} else {%>
+							<div class="col-md-6">
+								<!-- single dish -->
+								<div class="single-dish">
+									<div class="single-dish-heading">
+										<h4 class="name"><%=dishes.name%></h4>
+										<h4 class="price">₹<%=dishes.price%>/-</h4>
+									</div>
+									<p><%=dishes.description%></p>
+										<a href=""><button class="btn btn-info btn-sm">Order Now</button></a>
+										<a style="float:right" href=""><button class="btn btn-warning btn-sm">My Favouraite <i class="fa fa-heart" aria-hidden="true"></i></button></a>
+
+										<hr>
+								</div>
+								<!-- /single dish -->
+							</div>	
+							<%}%>
+							<%count++;}});%>
+							
+
+						</div>
+						<!-- /breakfast -->
+					</div>
+					
